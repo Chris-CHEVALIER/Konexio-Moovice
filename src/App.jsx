@@ -12,16 +12,7 @@ import Error404 from "./components/Error404";
 import Navbar from './components/Navbar';
 
 export default class App extends Component {
-  getCurrentPosition = () => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      console.log(`latitude : ${position.coords.latitude} / longitude : ${position.coords.longitude}`);
-    }, (error) => {
-      console.error(error);
-    });
-  }
-  
   render() {
-    this.getCurrentPosition();
     return (
       <BrowserRouter>
         <Navbar />
