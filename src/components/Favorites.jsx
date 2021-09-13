@@ -36,7 +36,7 @@ export default function Favorites() {
     }
 
     function getMovie (id) {
-        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=8c2c5c205a0ac5bb229fe92084e87cf4`)
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key={API_KEY}`)
         .then(res => res.json())
         .then(movie => {
             /*const films = this.state.movies;

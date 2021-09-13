@@ -5,13 +5,13 @@ export default function Popular () {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=8c2c5c205a0ac5bb229fe92084e87cf4")
+        fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key={API_KEY}")
         .then(res => res.json())
         .then(results => setMovies(results.results));
     }, []);
 
     /*componentDidMount() {
-        fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=8c2c5c205a0ac5bb229fe92084e87cf4")
+        fetch("https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key={API_KEY}")
         .then(res => res.json())
         .then(results => this.setState({
             movies: results.results
